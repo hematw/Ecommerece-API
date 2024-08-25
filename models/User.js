@@ -1,5 +1,7 @@
 const { DataTypes, UUIDV4 } = require("sequelize");
 const sequelize = require("../config/dbConn");
+const Product = require("./Product");
+const Address = require("./Address");
 
 const User = sequelize.define(
   "User",
@@ -23,7 +25,25 @@ const User = sequelize.define(
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+    },
+    isBlocked: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
+    address: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: Address,
+        key: "id",
+      },
+    },
+    wishlist: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: Product,
+        key: "id",
+      },
     },
   },
   {

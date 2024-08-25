@@ -8,9 +8,9 @@ const sequelize = new Sequelize("ecommerce", "root", "enter 123", {
 
 sequelize
   .authenticate()
-  .then(() => console.log("Database connected!"))
+  .then(() => console.log("Database connected! ☑️"))
   .catch((err) => console.log("Error: ", err));
 
-// sequelize.sync({force: true});
+sequelize.sync({force: true}).then(()=> console.log("Models synced ✅"));
 
 module.exports = sequelize;

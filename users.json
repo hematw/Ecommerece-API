@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "firstname": "habib",
+        "lastname": "maiwand",
+        "mobile": "9966789987",
+        "email": "habib@c.com",
+        "password": "$2b$10$4k2/FxIyljLnr0t985cYU.6wVuIzvTTUb0yAoaCghQLw1kbX84Vu6"
+    },
+    {
+        "id": 2,
+        "firstname": "rezwan",
+        "lastname": "waahed",
+        "mobile": "6678999987",
+        "email": "rezwan@c.com",
+        "password": "Abc@123"
+    },
+    {
+        "id": 3,
+        "firstname": "On",
+        "lastname": "Eyes",
+        "mobile": "6789967899",
+        "email": "oneyes@c.com",
+        "password": "$2b$10$YxDLTfkkmBoVMj/KsOagIus3BOGteUASbNxi4O0LBulIPeYKB/01."
+    },
+    {
+        "id": 4,
+        "firstname": "Farid",
+        "lastname": "Ahmadi",
+        "mobile": "9897678765",
+        "email": "farid@c.com",
+        "password": "$2b$10$5lK9shFzM9jRWkZPq1l9XuW8TOdX9PZ0bJHRgX8Nlx73v5PS/mOly"
+    },
+    {
+        "id": 5,
+        "firstname": "Sana",
+        "lastname": "Yousufzai",
+        "mobile": "7788999988",
+        "email": "sana@c.com",
+        "password": "$2b$10$3nFHF/xrRQke5UJBNczvYOiHkjv3RvTn8shJBl.hXsFwl6bwYZRZG"
+    },
+    {
+        "id": 6,
+        "firstname": "Zahid",
+        "lastname": "Rahimi",
+        "mobile": "9988776655",
+        "email": "zahid@c.com",
+        "password": "$2b$10$cdFb3LqQ0m/xgnZMCz3jqOaQbCZB1hQGSkJ1QHG60z/v.Jg6GRxXu"
+    },
+    {
+        "id": 7,
+        "firstname": "Maryam",
+        "lastname": "Shirzad",
+        "mobile": "7654321987",
+        "email": "maryam@c.com",
+        "password": "$2b$10$IbWhE35/A3uJHXHF5G7SVehlXHsk5sbMTOQ7nQOUbF8Gaq9aU/eZe"
+    },
+    {
+        "id": 8,
+        "firstname": "Jawad",
+        "lastname": "Ferozi",
+        "mobile": "9988009988",
+        "email": "jawad@c.com",
+        "password": "$2b$10$nMyZ7RDB/NFs6PqVdjFAvu64g2IF2kW9H9S7szt3IxZ0PNI29uXVO"
+    }
+]

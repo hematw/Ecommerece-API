@@ -95,6 +95,48 @@ const updateUser = asyncHandler(async (req, res) => {
   throw new CustomError(`user with id ${id} NOT found!`, StatusCodes.NOT_FOUND);
 });
 
+const blockUser = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+
+  const user = await User.findByPk(id);
+
+  if (user) {
+    await User.update({ isBlocked: true }, { where: { id } });
+    return res.status(StatusCodes.OK).json({
+      success: true,
+      msg: `user with id ${id} blocked.`,
+      blockedUser: user,
+    });
+  }
+  throw new CustomError(`user with id ${id} NOT found!`, StatusCodes.NOT_FOUND);
+});
+
+const unblockUser = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+
+  const user = await User.findByPk(id);
+
+  if (user) {
+    await User.update({ isBlocked: false }, { where: { id } });
+    return res.status(StatusCodes.OK).json({
+      success: true,
+      msg: `user with id ${id} blocked.`,
+      blockedUser: user.reload(),
+    });
+  }
+  throw new CustomError(`user with id ${id} NOT found!`, StatusCodes.NOT_FOUND);
+});
+
+const userBulkCreate = asyncHandler(async (req, res) => {
+    await User.bulkCreate(require("../users.json"))
+    return res.status(StatusCodes.OK).json({
+      success: true,
+      msg: `user bulk done.`,
+    });
+});
+
+
+
 module.exports = {
   registerUser,
   login,
@@ -102,4 +144,7 @@ module.exports = {
   getUser,
   deleteUser,
   updateUser,
+  blockUser,
+  unblockUser,
+  userBulkCreate
 };
