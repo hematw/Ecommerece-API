@@ -1,4 +1,4 @@
-const { DataTypes } = require("sequelize");
+const { DataTypes, UUIDV4 } = require("sequelize");
 const sequelize = require("../config/dbConn");
 
 const User = sequelize.define(
@@ -23,6 +23,7 @@ const User = sequelize.define(
     },
     password: {
       type: DataTypes.STRING,
+      allowNull: false
     },
   },
   {
